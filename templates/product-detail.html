@@ -1,0 +1,493 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Footwear - Product Detail</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Rokkitt:100,300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+
+<link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="colorlib-loader"></div>
+<div id="page">
+<nav class="colorlib-nav" role="navigation">
+<div class="top-menu">
+<div class="container">
+<div class="row">
+<div class="col-sm-7 col-md-9">
+<div id="colorlib-logo"><a href="index.html">Footwear</a></div>
+</div>
+<div class="col-sm-5 col-md-3">
+<form action="#" class="search-wrap">
+<div class="form-group">
+<input type="search" class="form-control search" placeholder="Search">
+<button class="btn btn-primary submit-search text-center" type="submit"><i class="fa fa-search"></i></button>
+</div>
+</form>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 text-left menu-1">
+<ul>
+<li><a href="{% url 'index' %}">Home</a></li>
+<li><a href="{% url 'men' %}">Men</a></li>
+<li><a href="{% url 'women' %}">Women</a></li>
+<li><a href="{% url 'about' %}">About</a></li>
+<li><a href="{% url 'contact' %}">Contact</a></li>
+<li class="cart"><a href="{% url 'cart' %}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart [{{ cart }}]</a></li>
+    <li class="cart"><a href="{% url 'register' %}">Register</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sale">
+<div class="container">
+<div class="row">
+<div class="col-sm-8 offset-sm-2 text-center">
+<div class="row">
+<div class="owl-carousel2">
+<div class="item">
+<div class="col">
+<h3><a href="#">25% off (Almost) Everything! Use Code: Summer Sale</a></h3>
+</div>
+</div>
+<div class="item">
+<div class="col">
+<h3><a href="#">Our biggest sale yet 50% off all summer shoes</a></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<div class="breadcrumbs">
+<div class="container">
+<div class="row">
+<div class="col">
+<p class="bread"><span><a href="{% url 'index' %}">Home</a></span> / <span>Product Details</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="colorlib-product">
+<div class="container">
+<div class="row row-pb-lg product-detail-wrap">
+<div class="col-sm-8">
+<div class="owl-carousel">
+<div class="item">
+<div class="product-entry border">
+<a href="#" class="prod-img">
+<img src="{{MEDIA_URL}}{{product.image1.url}}" class="img-fluid" alt="Not Found">
+</a>
+</div>
+</div>
+<div class="item">
+<div class="product-entry border">
+<a href="#" class="prod-img">
+<img src="{{MEDIA_URL}}{{product.image2.url}}" class="img-fluid" alt="Not Found">
+</a>
+</div>
+</div>
+<div class="item">
+<div class="product-entry border">
+<a href="#" class="prod-img">
+<img src="{{MEDIA_URL}}{{product.image3.url}}" class="img-fluid" alt="Not Found">
+</a>
+</div>
+</div>
+<div class="item">
+<div class="product-entry border">
+<a href="#" class="prod-img">
+<img src="{{MEDIA_URL}}{{product.image4.url}}" class="img-fluid" alt="Not Found">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="product-desc">
+<h3>{{ product.product_name }}</h3>
+<p class="price">
+<span>₹ {{ product.price }}</span>
+<span class="rate">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+(74 Rating)
+</span>
+</p>
+<p>{{ product.product_Description }}</p>
+<div class="size-wrap">
+<div class="block-26 mb-2">
+<h4>Size</h4>
+<ul>
+<li><a href="#">7</a></li>
+<li><a href="#">8</a></li>
+<li><a href="#">9</a></li>
+<li><a href="#">10</a></li>
+<li><a href="#">11</a></li>
+<li><a href="#">12</a></li>
+<li><a href="#">13</a></li>
+</ul>
+</div>
+<div class="block-26 mb-4">
+<h4>Width</h4>
+<ul>
+<li><a href="#">M</a></li>
+<li><a href="#">W</a></li>
+</ul>
+</div>
+</div>
+    <form action="{% url 'product_detail' product.sno %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" value="{{product.sno}}" name="sno">
+        <input type="hidden" value="{{product.product_name}}" name="product_name">
+        <input type="hidden" value="{{product.price}}" name="price">
+<div class="input-group mb-4">
+<span class="input-group-btn">
+<button type="button" class="quantity-left-minus btn" data-type="minus" data-field="">
+<i class="fa fa-minus"></i>
+</button>
+</span>
+<input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="2" max="100">
+<span class="input-group-btn ml-1">
+<button type="button" class="quantity-right-plus btn" data-type="plus" data-field=""><i class="fa fa-plus"></i></button>
+</span>
+</div>
+<div class="row">
+<div class="col-sm-12 text-center">
+    <button type="submit" style="border:none; background:none;">
+<span class="btn btn-primary btn-addtocart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Add to Cart</span>
+    </button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="row">
+<div class="col-md-12 pills">
+<div class="bd-example bd-example-tabs">
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true">Description</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Manufacturer</a>
+</li>
+    <!--  Reviews tab here -->
+<!-- li class="nav-item">
+<a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-expanded="true">Review</a>
+</li -->
+    <!--  End Reviews here -->
+</ul>
+<div class="tab-content" id="pills-tabContent">
+<div class="tab-pane border fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+    <p>{{ product.Large_Description }}</p>
+</div>
+<div class="tab-pane border fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
+<p>{{ product.Manufacturer }}</p>
+</div>
+<!-- div class="tab-pane border fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+<div c lass="row">
+<div class="col-md-8">
+<h3 class="head">23 Reviews</h3>
+<div class="review">
+<div class="user-img" style="background-image: url(images/person1.jpg)"></div>
+<div class="desc">
+<h4>
+<span class="text-left">Jacob Webb</span>
+<span class="text-right">14 March 2018</span>
+</h4>
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-half"></i>
+<i class="icon-star-empty"></i>
+</span>
+<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+</p>
+<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+</div>
+</div>
+<div class="review">
+<div class="user-img" style="background-image: url(images/person2.jpg)"></div>
+<div class="desc">
+<h4>
+<span class="text-left">Jacob Webb</span>
+<span class="text-right">14 March 2018</span>
+</h4>
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-half"></i>
+<i class="icon-star-empty"></i>
+</span>
+<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+</p>
+<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+</div>
+</div>
+<div class="review">
+<div class="user-img" style="background-image: url(images/person3.jpg)"></div>
+<div class="desc">
+<h4>
+<span class="text-left">Jacob Webb</span>
+<span class="text-right">14 March 2018</span>
+</h4>
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-half"></i>
+<i class="icon-star-empty"></i>
+</span>
+<span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+</p>
+<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="rating-wrap">
+<h3 class="head">Give a Review</h3>
+<div class="wrap">
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+(98%)
+</span>
+<span>20 Reviews</span>
+</p>
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-empty"></i>
+(85%)
+</span>
+<span>10 Reviews</span>
+</p>
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+(70%)
+</span>
+<span>5 Reviews</span>
+</p>
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-full"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+(10%)
+</span>
+<span>0 Reviews</span>
+</p>
+<p class="star">
+<span>
+<i class="icon-star-full"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+<i class="icon-star-empty"></i>
+(0%)
+</span>
+<span>0 Reviews</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div -->
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="colorlib-footer" role="contentinfo">
+<div class="container">
+<div class="row row-pb-md">
+<div class="col footer-col colorlib-widget">
+<h4>About Footwear</h4>
+<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life</p>
+<p>
+<ul class="colorlib-social-icons">
+<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+</ul>
+</p>
+</div>
+<div class="col footer-col colorlib-widget">
+<h4>Customer Care</h4>
+<p>
+<ul class="colorlib-footer-links">
+<li><a href="{% url 'contact'%}">Contact</a></li>
+<li><a href="{% url 'checkout' %}">Returns/Exchange</a></li>
+<li><a href="{% url 'add_to_wishlist' %}">Wishlist</a></li>
+</ul>
+</p>
+</div>
+<div class="col footer-col colorlib-widget">
+<h4>Information</h4>
+<p>
+<ul class="colorlib-footer-links">
+<li><a href="{% url 'about' %}">About us</a></li>
+<li><a href="{% url 'checkout' %}">Delivery Information</a></li>
+<li><a href="{% url 'about' %}">Privacy Policy</a></li>
+<li><a href="{% url 'contact' %}">Support</a></li>
+<li><a href="{% url 'order_complete' %}">Order Tracking</a></li>
+</ul>
+</p>
+</div>
+<div class="col footer-col">
+<h4>Contact Information</h4>
+<ul class="colorlib-footer-links">
+<li>Raj Kumar Goel Institute Of technology, <br> Ghaziabad</li>
+<li><a href="tel://9876543210">+91 9876543210</a></li>
+<li><a href="/cdn-cgi/l/email-protection#d3babdb5bc93aabca6a1a0baa7b6fdb0bcbe"><span class="__cf_email__" data-cfemail="bad3d4dcd5fac3d5cfc8c9d3cedf94d9d5d7">gmail@mymail.com</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="copy">
+<div class="row">
+<div class="col-sm-12 text-center">
+<!-- p>
+<span>
+Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+</span>
+<span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
+</p -->
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="gototop js-top">
+<a href="#" class="js-gotop"><i class="fa fa-arrow-circle-up"></i></a>
+</div>
+
+<script src="{% static 'js/jquery.min.js' %}"></script>
+
+<script src="{% static 'js/popper.min.js' %}"></script>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+
+<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/magnific-popup-options.js' %}"></script>
+
+<script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+
+<script>
+		$(document).ready(function(){
+
+		var quantitiy=0;
+		   $('.quantity-right-plus').click(function(e){
+		        
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+		        
+		        // If is not undefined
+		            
+		            $('#quantity').val(quantity + 1);
+
+		          
+		            // Increment
+		        
+		    });
+
+		     $('.quantity-left-minus').click(function(e){
+		        // Stop acting like a button
+		        e.preventDefault();
+		        // Get the field name
+		        var quantity = parseInt($('#quantity').val());
+		        
+		        // If is not undefined
+		      
+		            // Increment
+		            if(quantity>0){
+		            $('#quantity').val(quantity - 1);
+		            }
+		    });
+		    
+		});
+	</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Register Product</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="{% static 'main.css' %}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Register Products</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'register' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="name">Product name</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="Product_name" placeholder="Product Name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Price</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="text" name="price" placeholder="Price" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Type</div>
+                            <div class="value">
+                                <label for="male">Male</label>
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="female">Female</label>
+                              <input type="radio" id="female" name="gender" value="female" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Product Description</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="Product_Description" placeholder="Product Description" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Full Description</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="Full_Description" placeholder="Full Description" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Full Description</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="Manufacturer" placeholder="Manufacturer Detail" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Product Image 1</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="image1" id="file1">
+                                    <label class="label--file" for="file1">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Product Image 2</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="image2" id="file2">
+                                    <label class="label--file" for="file2">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Product Image 3</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="image3" id="file3">
+                                    <label class="label--file" for="file3">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Product Image 4</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="image4" id="file4">
+                                    <label class="label--file" for="file4">Choose file</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                            </div>
+                        </div>
+                <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Add Product</button>
+                </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'jquery.min.js' %}"></script>
+
+
+    <!-- Main JS-->
+    <script src="{% static 'global.js' %}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
